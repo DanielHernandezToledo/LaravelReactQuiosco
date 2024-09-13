@@ -17,10 +17,11 @@ const customStyles = {
   },
 };
 
+Modal.setAppElement('#root');
+
 export default function Layout() {
 
   const { modal, handleClickModal } = useQuiosco()
-  console.log(modal)
 
   return (
     <>
@@ -34,7 +35,6 @@ export default function Layout() {
 
 
         <Modal
-          ariaHideApp={false}
           isOpen={modal}
           style={customStyles}
         >
